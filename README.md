@@ -27,7 +27,9 @@ A comprehensive web-based keylogger application built with Python and Flask, pro
 - **Analytics Dashboard**: Comprehensive statistics including word frequency, typing patterns, and session metrics
 
 ### Technical Features
+- **Standalone Design**: Complete web interface embedded in a single Python file - no templates folder required
 - **JSON-based Storage**: Structured log format with timestamp and key type classification
+- **Modern UI**: Professional gradient-based interface with responsive design
 - **Graceful Shutdown**: Clean termination handling with proper resource cleanup
 - **Cross-platform Support**: Compatible with Windows, macOS, and Linux
 - **RESTful API**: Complete API endpoints for programmatic integration
@@ -40,12 +42,16 @@ A comprehensive web-based keylogger application built with Python and Flask, pro
 
 ## Installation
 
-### 1. Clone the Repository
+### 1. Clone or Download
 
+**Option A: Clone Repository**
 ```bash
-git clone https://github.com/yourusername/flask-keylogger.git
+git clone https://github.com/ciscoAnass/Python-KeyLogger.git
 cd flask-keylogger
 ```
+
+**Option B: Download Single File**
+Since this is a standalone application, you can simply download the `app.py` file and run it directly!
 
 ### 2. Create Virtual Environment (Recommended)
 
@@ -70,35 +76,43 @@ pip install flask pynput
 
 ```
 flask-keylogger/
-├── app.py                    # Main Flask application
+├── app.py                    # Standalone Flask application (includes embedded HTML/CSS/JS)
 ├── requirements.txt          # Python dependencies
 ├── README.md                # Project documentation
-├── templates/
-│   └── index.html           # Web interface template
-├── static/                  # CSS, JS, and other static files
-│   ├── css/
-│   ├── js/
-│   └── images/
 ├── keylogs/                 # Auto-generated log storage directory
-└── tests/                   # Unit and integration tests
+└── tests/                   # Unit and integration tests (optional)
 ```
+
+### ✨ **Standalone Architecture**
+This application features a **completely self-contained design** - no separate template files needed! The entire web interface (HTML, CSS, and JavaScript) is embedded directly within `app.py`, making deployment and distribution incredibly simple.
 
 ## Usage
 
 ### Starting the Application
 
-1. **Run the Flask server**:
+1. **Run the standalone application**:
    ```bash
    python app.py
    ```
 
-2. **Access the web interface**:
+2. **You'll see the startup message**:
+   ```
+   🖥️  Flask Keylogger Web Interface
+   ==================================================
+   🚀 Starting server...
+   🌐 Access the dashboard at: http://127.0.0.1:5000
+   ⚠️  Use responsibly and with proper authorization
+   🛑 Press Ctrl+C to stop the server
+   ==================================================
+   ```
+
+3. **Access the modern web interface**:
    ```
    http://localhost:5000
    ```
 
-3. **Start keylogging**:
-   - Click "Start Keylogger" in the web interface, or
+4. **Start keylogging**:
+   - Click "▶️ Start Monitoring" in the web interface, or
    - Send a POST request to `/start` endpoint
 
 ### Configuration
@@ -113,8 +127,18 @@ DEBUG = False
 
 # Logging configuration
 LOG_DIRECTORY = 'keylogs'
-LOG_FORMAT = 'session_%Y%m%d_%H%M%S.json'
+LOG_FORMAT = 'keylog_%Y-%m-%d_%H-%M-%S.json'
 ```
+
+### UI Features
+
+The embedded web interface includes:
+- **Modern gradient design** with professional styling
+- **Real-time status updates** with visual indicators
+- **Responsive layout** that works on mobile and desktop
+- **Tabbed content viewer** for session analysis
+- **Loading animations** and smooth transitions
+- **Professional dashboard** with comprehensive analytics
 
 ## API Documentation
 
@@ -275,8 +299,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-**Version**: 1.0.0  
-**Last Updated**: July 13, 2025  
-**Maintained by**: [Your Name/Organization]
-
-For support and questions, please open an issue on GitHub or contact [your-email@example.com].
+For support and questions, please open an issue on GitHub or contact [anass.assim.2010@gmail.com].
